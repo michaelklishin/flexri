@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+def show_help
+  STDOUT.puts <<-EOH
+flexri is like ri but for ActionScript 3 documentation.
+
+Given it fully qualified class name and it will open you
+documentation page in the browser:
+
+flexri flash.events.Event
+
+It supposed to work on Mac OS X. Feel free to port it to other platforms.
+EOH
+end
+
+def open_documentation(path)
+  system "open http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/#{path}.html"
+end
+
+arg = ARGV[0]
+if arg.nil? || ["-h", "help", "--help"].include?(arg)
+  show_help and exit(0)
+else
+  open_documentation(arg.gsub(".", "/"))
+end
