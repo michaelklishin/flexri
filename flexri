@@ -4,7 +4,7 @@ def show_help
   STDOUT.puts <<-EOH
 flexri is like ri but for ActionScript 3 documentation.
 
-Given it fully qualified class name and it will open you
+Give it a fully qualified class name and it will open you
 documentation page in the browser:
 
 flexri flash.events.Event
