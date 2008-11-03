@@ -1,0 +1,8 @@
+flexri is like ri but for ActionScript 3 documentation.
+
+Give it a fully qualified class name and it will open you
+documentation page in the browser:
+
+flexri flash.events.Event
+
+It supposed to work on Mac OS X. Feel free to port it to other platforms.
